@@ -14,7 +14,15 @@ $config = [
         '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
+        'response' => [
+          'format' => 'json'
+        ],
         'request' => [
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ],
+            'enableCsrfValidation' => false,
+
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'wfEQPFe8d0X2Ia9fZxx1t_CmRxAIY9C4',
         ],

@@ -36,6 +36,11 @@ class BenchmarkController extends Controller
         return $response;
     }
 
+    public function actionTest(): Response
+    {
+        return $this->asJson(["message" => "Hello World"]);
+    }
+
 
     private function sort(array $arr): array
     {

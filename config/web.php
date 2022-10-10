@@ -6,11 +6,6 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
-    'controllerMap' => [
-        'heroku' => [
-            'class' => 'purrweb\heroku\HerokuGeneratorController',
-        ],
-    ],
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -19,11 +14,6 @@ $config = [
         '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
-        'controllerMap' => [
-            'heroku' => [
-                'class' => 'purrweb\heroku\HerokuGeneratorController',
-            ],
-        ],
         'response' => [
           'format' => 'json'
         ],

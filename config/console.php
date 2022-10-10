@@ -8,6 +8,11 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'app\commands',
+    'controllerMap' => [
+        'heroku' => [
+            'class' => 'purrweb\heroku\HerokuGeneratorController',
+        ],
+    ],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
